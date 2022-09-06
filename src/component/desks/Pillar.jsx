@@ -7,6 +7,6 @@ const Main = styled.div`
 `
 export default () => {
     return (
-        <Main></Main>
+        <Main>hi</Main>
     )
 }
