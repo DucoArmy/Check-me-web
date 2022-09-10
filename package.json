@@ -34,5 +34,4 @@
     "webpack-dev-server": "^4.9.3",
     "ts-loader": "^9.3.1"
   }
-
 }
