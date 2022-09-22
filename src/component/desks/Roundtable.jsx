@@ -1,12 +1,13 @@
 import styled from "styled-components"
-const Main = styled.div`
-    width: 400px;
-    height: 400px;
+const Roundtable = styled.div`
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    background-color: #dadada;
+    box-shadow: 1px 1px 2px 2px #00000025;
+    background-color: #dadada  
 `
 export default () => {
     return (
-        <Main></Main>
+        <Roundtable></Roundtable>
     )
 }
