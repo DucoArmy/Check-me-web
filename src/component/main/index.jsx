@@ -14,10 +14,9 @@ const Render = () => {
         <S.Main>
             <S.Check_Mi_Seat> {/*회색 사각형 틀 */}
                 <Pillar></Pillar>
-                {/* <Roundtable>Roundtable</Roundtable> */}
-                {/* <Pillar>Pillar</Pillar> */}
-                {/* <LargeTable>LargeTable</LargeTable> */}
-                {/* <SmallTable>SmallTable</SmallTable> */}
+                <Roundtable>Roundtable</Roundtable>
+                <LargeTable>LargeTable</LargeTable>
+                <SmallTable>SmallTable</SmallTable>
             </S.Check_Mi_Seat>
         </S.Main>
     )
