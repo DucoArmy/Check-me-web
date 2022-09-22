@@ -11,6 +11,12 @@ module.exports = merge(common, {
         },
         historyApiFallback: true,
         port: 3000,
-        hot: true
+        hot: true,
+        proxy: {
+            "/member": {
+              target: "http://api.checkmi.kro.kr:8001/",
+              changeOrigin: true,
+            },
+        },
     },
 })
