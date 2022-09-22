@@ -56,3 +56,10 @@ export const TestBox = styled.div`
         font-size: 16px;
     }
 `
+
+export const Check_Mi_Seat=styled.div`
+    margin:70px auto;
+    width:900px;
+    height:750px;
+    background-color: #b5b5b5;
+`
