@@ -2,7 +2,7 @@ import styled from "styled-components";
 export const Main = styled.div`
     width: 100vw;
     height: 1000px;
-    background-color: green;
+    background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
 `
@@ -55,4 +55,11 @@ export const TestBox = styled.div`
         text-align: center;
         font-size: 16px;
     }
+`
+
+export const Check_Mi_Seat=styled.div`
+    margin:70px auto;
+    width:900px;
+    height:750px;
+    background-color: #b5b5b5;
 `
