@@ -40,6 +40,7 @@ const Render = () => {
             github: getInput[5].val,
             phoneNumber: getInput[6].val,
           })
+          .then(() => {window.location.href = "/list"})
         getInput.forEach((e) => {
             console.log(e.val)
         })
