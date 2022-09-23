@@ -3,19 +3,21 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import { Roundtable, Pillar, LargeTable, SmallTable, StudentCard } from '../desks'
 const Render = () => {
-    // useEffect(() => {
-    //     axios.get("/main/get?id=1")
-    //     .then(result => {
-    //         console.log(result)
-    //     })
-    //     .catch(console.log)
-    // }, [])
+    useEffect(() => {
+        axios.get("/member/list")
+        .then(result => {
+            console.log(result)
+        })
+        .catch(console.log)
+    }, [])
     return (
         <S.Main>
-            <Roundtable>Roundtable</Roundtable>
-            <Pillar>Pillar</Pillar>
-            <LargeTable>LargeTable</LargeTable>
-            <SmallTable>SmallTable</SmallTable>
+            <S.Check_Mi_Seat> {/*회색 사각형 틀 */}
+                <Pillar></Pillar>
+                <Roundtable>Roundtable</Roundtable>
+                <LargeTable>LargeTable</LargeTable>
+                <SmallTable>SmallTable</SmallTable>
+            </S.Check_Mi_Seat>
         </S.Main>
     )
 }
