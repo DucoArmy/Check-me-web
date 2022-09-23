@@ -107,21 +107,21 @@ const Door2 = styled.div` //오른쪽문 위치, 디자인 설정
 export default () => {
     return (
        <Check_Mi_Seat>
-            <Pillar1 className="Pillar1_Location"></Pillar1>
-            <Board className="Board_Location"></Board>
+            <Pillar1></Pillar1>
+            <Board></Board>
 
             <Cabinet_Location>
-                <Smallcabinet className="Smallcabinet_Location"></Smallcabinet>
-                <Largelcabinet className="Largelcabinet_Location"></Largelcabinet>
+                <Smallcabinet></Smallcabinet>
+                <Largelcabinet></Largelcabinet>
             </Cabinet_Location>
 
 
             <Under_Location>
-                <Door1 className="Door1_Location"></Door1>
-                <Window1 className="Window1_Location"></Window1>
-                <Pillar2 className="Pillar2_Location"></Pillar2>
-                <Window2 className="Window2_Location"></Window2>
-                <Door2 className="Door2_Location"></Door2>
+                <Door1></Door1>
+                <Window1></Window1>
+                <Pillar2></Pillar2>
+                <Window2></Window2>
+                <Door2></Door2>
             </Under_Location>
 
         </Check_Mi_Seat>
