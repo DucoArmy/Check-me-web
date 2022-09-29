@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const title = styled.div`
+    color: #ffffff;
+    font-size:35px;
+    font-family:pretendard;
+
+`
 export const Main = styled.div`
     height: 80px;
     width: 100vw;
@@ -7,7 +13,7 @@ export const Main = styled.div`
     background-color: #66AA65;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 `
 export const ConfigForm = styled.div`
     height: 100%;
