@@ -16,13 +16,15 @@ const Under_Location=styled.div` // 창문,문,pillar2의 전체적인 위치설
     top:590px;
     left: 5%;
 `
-const Pillar1 = styled.div` // pillar2이 위치,디자인설정
+const Pillar1 = styled.div` // pillar1의 위치,디자인설정
     width: 100px;
     height: 20px;
     border-radius: 3px;
     background-color: #DADADA;
     box-shadow:3px 3px 6px 1px #5b5b5b ;
-    margin: 10px auto;
+    position: relative;
+    left:400px;
+    top:15px;
 `
 
 const Pillar2 = styled.div` // pillar2의 위치,디자인 설정
@@ -106,22 +108,22 @@ const Door2 = styled.div` //오른쪽문 위치, 디자인 설정
 
 export default () => {
     return (
-       <Check_Mi_Seat>
-            <Pillar1 className="Pillar1_Location"></Pillar1>
-            <Board className="Board_Location"></Board>
+      <Check_Mi_Seat>
+            <Pillar1></Pillar1>
+            <Board></Board>
 
             <Cabinet_Location>
-                <Smallcabinet className="Smallcabinet_Location"></Smallcabinet>
-                <Largelcabinet className="Largelcabinet_Location"></Largelcabinet>
+                <Smallcabinet></Smallcabinet>
+                <Largelcabinet></Largelcabinet>
             </Cabinet_Location>
 
 
             <Under_Location>
-                <Door1 className="Door1_Location"></Door1>
-                <Window1 className="Window1_Location"></Window1>
-                <Pillar2 className="Pillar2_Location"></Pillar2>
-                <Window2 className="Window2_Location"></Window2>
-                <Door2 className="Door2_Location"></Door2>
+                <Door1></Door1>
+                <Window1></Window1>
+                <Pillar2></Pillar2>
+                <Window2></Window2>
+                <Door2></Door2>
             </Under_Location>
 
         </Check_Mi_Seat>
