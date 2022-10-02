@@ -6,14 +6,58 @@ const Check_Mi_Seat=styled.div`
     height:750px;
     background-color: #b5b5b5; */
 `
+const LargeTable = styled.div`
+    width: 160px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #DADADA;
+    box-shadow: 1px 3px 1px 1px #00000056;
+    margin-left: 5px;
+    margin-right: 5px;
 
+`
+const center = styled.div`
+    width: 160px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #DADADA;
+    box-shadow: 1px 3px 1px 1px #00000056;
+    margin-left: 5px;
+    margin-right: 5px;
+
+`
+const SmallTable = styled.div`
+    width: 120px;
+    height: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10%;
+    background-color: #dadada;
+    box-shadow: 1px 3px 1px 1px #00000056;
+`
+const SmallTable_column=styled.div`
+    width: 60px;
+    height: 103px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    background-color: #dadada;
+    box-shadow: 1px 3px 1px 1px #00000056;
+`
+const Roundtable = styled.div`
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 2px #00000025;
+    background-color: #dadada  
+`
 const Cabinet_Location=styled.div` //큰캐비넷 작은 캐비넷 위치 설정
     float:left;
 `
 const Under_Location=styled.div` // 창문,문,pillar2의 전체적인 위치설정
     display: flex;
     position: relative;
-    top:590px;
+    top:90px;
     left: 5%;
 `
 const Pillar1 = styled.div` // pillar2이 위치,디자인설정
@@ -22,7 +66,8 @@ const Pillar1 = styled.div` // pillar2이 위치,디자인설정
     border-radius: 3px;
     background-color: #DADADA;
     box-shadow:3px 3px 6px 1px #5b5b5b ;
-    margin: 10px auto;
+    margin-left:20px;
+    margin-right:20px;
 `
 
 const Pillar2 = styled.div` // pillar2의 위치,디자인 설정
@@ -103,19 +148,51 @@ const Door2 = styled.div` //오른쪽문 위치, 디자인 설정
     left: 35px;
     top:8px;
 `
+const LargetableTop_location = styled.div` // 상단 큰 책상 위치설정
+    display: flex;
+    flex-direction: row;
+    margin:20px;
 
-export default () => {
-    return (
-       <Check_Mi_Seat>
-            <Pillar1></Pillar1>
+`
+const Smalltable_location=styled.div`
+    margin-top:100px;
+    width:60px;
+`
+const Pillar = () => {
+    return(
+        <Check_Mi_Seat>
+            <center_location></center_location>
+            <LargetableTop_location>
+                <LargeTable></LargeTable>
+                <LargeTable></LargeTable>
+                <Pillar1></Pillar1>
+                <SmallTable></SmallTable>
+                <SmallTable></SmallTable>
+            </LargetableTop_location>
             <Board></Board>
-
             <Cabinet_Location>
                 <Smallcabinet></Smallcabinet>
                 <Largelcabinet></Largelcabinet>
             </Cabinet_Location>
-
-
+            <LargetableTop_location>
+            <Smalltable_location>
+                <SmallTable_column></SmallTable_column>
+                <SmallTable_column></SmallTable_column>
+                <SmallTable_column></SmallTable_column>
+                <SmallTable_column></SmallTable_column>
+                <SmallTable_column></SmallTable_column>
+            </Smalltable_location>
+            <LargeTable></LargeTable>
+            <LargeTable></LargeTable>
+            <Smalltable_location>
+                <SmallTable_column></SmallTable_column>
+                <SmallTable_column></SmallTable_column>
+                <SmallTable_column></SmallTable_column>
+                <SmallTable_column></SmallTable_column>
+                <SmallTable_column></SmallTable_column>
+            </Smalltable_location>
+            </LargetableTop_location>
+            
             <Under_Location>
                 <Door1></Door1>
                 <Window1></Window1>
@@ -127,3 +204,4 @@ export default () => {
         </Check_Mi_Seat>
     )
 }
+export default Pillar;
