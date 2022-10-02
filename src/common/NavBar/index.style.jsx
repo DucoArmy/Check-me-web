@@ -4,6 +4,7 @@ export const title = styled.div`
     color: #ffffff;
     font-size:35px;
     font-family:pretendard;
+    
 
 `
 export const Main = styled.div`
