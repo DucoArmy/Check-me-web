@@ -7,7 +7,7 @@ const Check_Mi_Seat=styled.div`
     background-color: #b5b5b5; */
 `
 const LargeTable = styled.div`
-    width: 160px;
+    width: 157px;
     height: 70px;
     border-radius: 10px;
     background-color: #DADADA;
@@ -16,7 +16,7 @@ const LargeTable = styled.div`
     margin-right: 5px;
 
 `
-const center = styled.div`
+const center_location = styled.div`
     width: 160px;
     height: 70px;
     border-radius: 10px;
@@ -49,7 +49,8 @@ const Roundtable = styled.div`
     height: 200px;
     border-radius: 50%;
     box-shadow: 1px 1px 2px 2px #00000025;
-    background-color: #dadada  
+    background-color: #dadada  ;
+    margin:80px;
 `
 const Cabinet_Location=styled.div` //큰캐비넷 작은 캐비넷 위치 설정
     float:left;
@@ -57,7 +58,6 @@ const Cabinet_Location=styled.div` //큰캐비넷 작은 캐비넷 위치 설정
 const Under_Location=styled.div` // 창문,문,pillar2의 전체적인 위치설정
     display: flex;
     position: relative;
-    top:90px;
     left: 5%;
 `
 const Pillar1 = styled.div` // pillar2이 위치,디자인설정
@@ -155,8 +155,20 @@ const LargetableTop_location = styled.div` // 상단 큰 책상 위치설정
 
 `
 const Smalltable_location=styled.div`
-    margin-top:100px;
+
     width:60px;
+`
+const Centertable=styled.div`
+    margin-left: 180px;
+`
+const CenterLargetable=styled.div`
+    display: flex;
+    flex-direction: center;
+`
+const Centers=styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items:center;
 `
 const Pillar = () => {
     return(
@@ -174,6 +186,7 @@ const Pillar = () => {
                 <Smallcabinet></Smallcabinet>
                 <Largelcabinet></Largelcabinet>
             </Cabinet_Location>
+            <Centertable>
             <LargetableTop_location>
             <Smalltable_location>
                 <SmallTable_column></SmallTable_column>
@@ -182,8 +195,13 @@ const Pillar = () => {
                 <SmallTable_column></SmallTable_column>
                 <SmallTable_column></SmallTable_column>
             </Smalltable_location>
+            <Centers>
+            <CenterLargetable>
             <LargeTable></LargeTable>
             <LargeTable></LargeTable>
+            </CenterLargetable>
+            <Roundtable></Roundtable>
+            </Centers>
             <Smalltable_location>
                 <SmallTable_column></SmallTable_column>
                 <SmallTable_column></SmallTable_column>
@@ -192,6 +210,7 @@ const Pillar = () => {
                 <SmallTable_column></SmallTable_column>
             </Smalltable_location>
             </LargetableTop_location>
+            </Centertable>
             
             <Under_Location>
                 <Door1></Door1>
