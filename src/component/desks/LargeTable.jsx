@@ -1,6 +1,6 @@
 import styled from "styled-components"
 const Main = styled.div`
-    width: 157px;
+    width: 160px;
     height: 70px;
     border-radius: 10px;
     background-color: #DADADA;
