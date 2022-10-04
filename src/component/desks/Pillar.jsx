@@ -21,7 +21,16 @@ const Under_Location=styled.div` // 창문,문,pillar2의 전체적인 위치설
     left:400px;
     top:15px;
 `
-
+const Pillar1 = styled.div` // pillar1의 위치,디자인설정
+    width: 100px;   
+    height: 20px;
+    border-radius: 3px;
+    background-color: #DADADA;
+    box-shadow:3px 3px 6px 1px #5b5b5b ;
+    position: relative;
+    left:400px;
+    top:15px;
+`
 const Pillar2 = styled.div` // pillar2의 위치,디자인 설정
     width: 150px;
     height: 25px;
