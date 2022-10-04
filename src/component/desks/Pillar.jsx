@@ -13,11 +13,6 @@ const Cabinet_Location=styled.div` //큰캐비넷 작은 캐비넷 위치 설정
 const Under_Location=styled.div` // 창문,문,pillar2의 전체적인 위치설정
     display: flex;
     position: relative;
-    top:700px;
-    left: 5%;
-`
-const Pillar1 = styled.div` // pillar1의 위치,디자인설정
-    width: 100px;
     height: 20px;
     border-radius: 3px;
     background-color: #DADADA;
