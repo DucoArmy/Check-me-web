@@ -28,7 +28,7 @@ const Pillar1 = styled.div` // pillar1의 위치,디자인설정
     background-color: #DADADA;
     box-shadow:3px 3px 6px 1px #5b5b5b ;
     position: relative;
-    left:400px;
+    left:401px;
     top:15px;
 `
 const Pillar2 = styled.div` // pillar2의 위치,디자인 설정
