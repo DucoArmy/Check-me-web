@@ -11,7 +11,7 @@ export const MainContent = styled.div`
     display: flex;
     width: 1000px;
     height: 300px;
-    background-color: lightgray;
+    background-color: #ffffff;
     border: 4px solid black;
     border-radius: 5px;
     margin-bottom: 50px;
@@ -61,5 +61,5 @@ export const Check_Mi_Seat=styled.div`
     margin:70px auto;
     width:900px;
     height:80vh;
-    background-color: #b5b5b5;
+    background-color: #ffffff;
 `
