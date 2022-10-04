@@ -19,7 +19,7 @@ const SmallTable_leftlocation = styled.div`
     display: flex;
     flex-direction: column;
     position: relative;
-    top:-110px;
+    top:-320px;
     left:170px;
 
 `
@@ -27,7 +27,7 @@ const SmallTable_rightlocation = styled.div`
     display: flex;
     flex-direction: column;
     position: relative;
-    top:-110px;
+    top:-320px;
     left:520px;
 
 `
@@ -37,10 +37,10 @@ const Row_location = styled.div`
 `
 const Top_location= styled.div`
     display: flex;
-    position: absolute;
+    position: relative;
     flex-direction: row;
-    top:160px;
-    left:900px;
+    top:-390px;
+    left:500px;
 `
 export default () => {
     return (
@@ -48,7 +48,7 @@ export default () => {
         <Top_location>
             <SmallTable_row></SmallTable_row>
             <SmallTable_row></SmallTable_row>
-            <SmallTable></SmallTable>
+            <SmallTable style={{marginLeft:30}}></SmallTable>
         </Top_location>
         <Row_location>
         <SmallTable_leftlocation>

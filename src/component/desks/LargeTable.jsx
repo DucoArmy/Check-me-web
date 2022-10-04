@@ -11,14 +11,14 @@ const LargeTable = styled.div`
 `
 const LargeTable_leftlocation = styled.div`
     position: relative;
-    top:-110px;
     display: flex;
     flex-direction:row;
+    top:-230px;
 `
 const LargeTable_centerlocation = styled.div`
     position: relative;
-    top:-30px;
-    left:240px;
+    top:-130px;
+    left:245px;
     display: flex;
     flex-direction:row;
 `
