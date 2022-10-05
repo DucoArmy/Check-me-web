@@ -3,6 +3,7 @@ const Render = () => {
     
     return (
         <S.Main>
+            <S.title>Check-Mi</S.title>
         </S.Main>
     )
 }

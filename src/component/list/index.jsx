@@ -9,9 +9,9 @@ const Button = styled.button`
 const Render = () => {
     const [getMembers, setMembers] = useState([])
     useEffect(() => {
-        axios.get("/member/list")
+        axios.get("/attend/list")
         .then(result => {
-            console.log(result.data.data)
+            console.log(result.data)
             setMembers(result.data.data)
         })
         .catch(console.log)
@@ -40,6 +40,7 @@ const Render = () => {
             github: getInput[5].val,
             phoneNumber: getInput[6].val,
           })
+          .then(() => {window.location.href = "/list"})
         getInput.forEach((e) => {
             console.log(e.val)
         })
@@ -56,7 +57,7 @@ const Render = () => {
             <Button onClick={click}>전송</Button>
             {
                 getMembers.map((element, idx) => {
-                    return <div key={idx}>{element.name}</div>
+                    return <div key={idx}>{element.member.grade=="2" ? <div style={{color:"green"}}>{element.member.name}</div>:<div style={{color:"gray"}}>{element.member.name}</div>}</div>
                 })
             }
         </div>

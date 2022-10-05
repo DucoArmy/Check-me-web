@@ -17,6 +17,10 @@ module.exports = merge(common, {
               target: "http://api.checkmi.kro.kr:8001/",
               changeOrigin: true,
             },
+            "/attend": {
+                target: "http://api.checkmi.kro.kr:8001/",
+                changeOrigin: true,
+            },
         },
     },
 })

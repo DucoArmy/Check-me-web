@@ -13,24 +13,28 @@ const Cabinet_Location=styled.div` //큰캐비넷 작은 캐비넷 위치 설정
 const Under_Location=styled.div` // 창문,문,pillar2의 전체적인 위치설정
     display: flex;
     position: relative;
-    top:590px;
-    left: 5%;
+    height: 20px;
+    border-radius: 3px;
+    position: relative;
+    left:50px;
+    top:750px;
 `
-const Pillar1 = styled.div` // pillar2이 위치,디자인설정
-    width: 100px;
+const Pillar1 = styled.div` // pillar1의 위치,디자인설정
+    width: 100px;   
     height: 20px;
     border-radius: 3px;
     background-color: #DADADA;
-    box-shadow:3px 3px 6px 1px #5b5b5b ;
-    margin: 10px auto;
+    box-shadow: 1px 3px 1px 1px #00000056;
+    position: relative;
+    left:401px;
+    top:15px;
 `
-
 const Pillar2 = styled.div` // pillar2의 위치,디자인 설정
     width: 150px;
     height: 25px;
     border-radius: 3px;
     background-color: #DADADA;
-    box-shadow:3px 3px 6px 1px #5b5b5b ;
+    box-shadow: 1px 3px 1px 1px #00000056;
     position: relative;
     top:82px;
     margin: 0 15px 0 15px;
@@ -40,33 +44,39 @@ const Board = styled.div` //칠판 위치,디자인 설정
     height: 420px;
     border-radius: 3px; 
     background-color: #DADADA;
-    box-shadow:3px 3px 6px 1px #5b5b5b ;
+    box-shadow: 1px 3px 1px 1px #00000056;
     float:right;
     margin:95px 15px 0 0;
+    position: relative;
+    top:100px;
 `
 const Smallcabinet = styled.div` //작은 캐비넷 위치,디자인 설정
     width: 21px;
     height: 115px;
     border-radius: 3px;
     background-color: #DADADA;
-    box-shadow:3px 3px 6px 1px #5b5b5b ;
+    box-shadow: 1px 3px 1px 1px #00000056;
     margin:85px 0 15px 15px;
+    position: relative;
+    top:100px;
 `
 const Largelcabinet = styled.div` //큰 캐비넷 위치,디자인,설정
     width: 21px;
     height: 220px;
     border-radius: 3px;
     background-color: #DADADA;
-    box-shadow:3px 3px 6px 1px #5b5b5b ;
+    box-shadow: 1px 3px 1px 1px #00000056;
     margin:85px 0 0 15px;
-`
+        position: relative;
+    top:100px;
+    `
 
 const Window1 = styled.div` // 창문1의 위치,디자인 설정
     width: 150px;
     height: 10px;
     border-radius: 3px;
     background-color: #DADADA;
-    box-shadow:3px 3px 6px 1px #5b5b5b ;
+    box-shadow: 1px 3px 1px 1px #00000056;
     position: relative;
     top:95px;
     margin:0 20px 0 15px;
@@ -76,7 +86,7 @@ const Window2 = styled.div` // 창문2의 위치,디자인 설정
     height: 10px;
     border-radius: 3px;
     background-color: #DADADA;
-    box-shadow:3px 3px 6px 1px #5b5b5b ;
+    box-shadow: 1px 3px 1px 1px #00000056;
     position: relative;
     top:95px;
     margin:0 20px 0 15px;
@@ -87,7 +97,7 @@ const Door1 = styled.div` // 왼쪽 문 위치,디자인 설정
     height: 100px;
     border-top-right-radius: 100px;
     background-color: #DADADA;
-    box-shadow:3px 3px 6px 1px #5b5b5b ;
+    box-shadow: 1px 3px 1px 1px #00000056;
     position: relative;
     right: 45px;
     top:8px;
@@ -98,7 +108,7 @@ const Door2 = styled.div` //오른쪽문 위치, 디자인 설정
     height: 100px;
     border-top-left-radius: 100px;
     background-color: #DADADA;
-    box-shadow:3px 3px 6px 1px #5b5b5b ;
+    box-shadow: 1px 3px 1px 1px #00000056;
     position: relative;
     left: 35px;
     top:8px;
@@ -106,22 +116,22 @@ const Door2 = styled.div` //오른쪽문 위치, 디자인 설정
 
 export default () => {
     return (
-       <Check_Mi_Seat>
-            <Pillar1 className="Pillar1_Location"></Pillar1>
-            <Board className="Board_Location"></Board>
+      <Check_Mi_Seat>
+            <Pillar1></Pillar1>
+            <Board></Board>
 
             <Cabinet_Location>
-                <Smallcabinet className="Smallcabinet_Location"></Smallcabinet>
-                <Largelcabinet className="Largelcabinet_Location"></Largelcabinet>
+                <Smallcabinet></Smallcabinet>
+                <Largelcabinet></Largelcabinet>
             </Cabinet_Location>
 
 
             <Under_Location>
-                <Door1 className="Door1_Location"></Door1>
-                <Window1 className="Window1_Location"></Window1>
-                <Pillar2 className="Pillar2_Location"></Pillar2>
-                <Window2 className="Window2_Location"></Window2>
-                <Door2 className="Door2_Location"></Door2>
+                <Door1></Door1>
+                <Window1></Window1>
+                <Pillar2></Pillar2>
+                <Window2></Window2>
+                <Door2></Door2>
             </Under_Location>
 
         </Check_Mi_Seat>
