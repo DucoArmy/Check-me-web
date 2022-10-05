@@ -60,6 +60,6 @@ export const TestBox = styled.div`
 export const Check_Mi_Seat=styled.div`
     margin:70px auto;
     width:900px;
-    height:80vh;
-    background-color: #ffffff;
+    height:104vh;
+    background-color: #5d5a5a;
 `
