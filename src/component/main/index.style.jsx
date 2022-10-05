@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const Main = styled.div`
     width: 100vw;
-    height: 1000px;
+    height: 980px;
     background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
