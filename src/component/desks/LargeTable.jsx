@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import 
 const LargeTable = styled.div`
     width: 160px;
     height: 70px;
@@ -26,8 +27,8 @@ export default () => {
     return (
         <>
             <LargeTable_leftlocation>
-                <LargeTable></LargeTable>
-                <LargeTable></LargeTable>
+                <LargeTable.></LargeTable>
+                <LargeTable className="1"></LargeTable>
             </LargeTable_leftlocation>
             <LargeTable_centerlocation>
                 <LargeTable></LargeTable>

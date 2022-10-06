@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import * as D from './desk.style'
+
 const SmallTable = styled.div`
     width: 56px;
     height: 103px;
@@ -46,7 +48,7 @@ export default () => {
     return (
         <>
         <Top_location>
-            <SmallTable_row></SmallTable_row>
+            <SmallTable_row style={{backgroundColor:"#66AA65"}}></SmallTable_row>
             <SmallTable_row></SmallTable_row>
             <SmallTable style={{marginLeft:30}}></SmallTable>
         </Top_location>
