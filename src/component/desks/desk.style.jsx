@@ -5,30 +5,11 @@ import styled from 'styled-components'
 export const Desk1 = styled.div`
     background-color: #ffffff;
 `
-
-const Desk = () => {
-    useEffect(() => {
-        axios.get("/member/list")
-        .then(result => {
-            console.log(result)
-        })
-        .catch(console.log)
-    }, [])
-    const [getMembers, setMembers] = useState([])
-    useEffect(() => {
-        axios.get("/attend/list")
-        .then(result => {
-            console.log(result.data)
-            setMembers(result.data.data)
-        })
-        .catch(console.log)
-    }, [])
-    return (
-        <div>hello</div>
-
-
-        
-
-    )
-}
-export default Desk
+export const SmallTable = styled.div`
+    width: 56px;
+    height: 103px;
+    border-radius: 10%;
+    background-color: #66AA65;
+    box-shadow: 1px 3px 1px 1px #00000056;
+    margin:5px;
+`
