@@ -29,7 +29,6 @@ const Pillar1 = styled.div` // pillar1의 위치,디자인설정
     left:401px;
     top:15px;
 `
-
 const Pillar2 = styled.div` // pillar2의 위치,디자인 설정
     width: 150px;
     height: 25px;
