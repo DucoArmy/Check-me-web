@@ -8,7 +8,7 @@ const Roundtable = styled.div`
 `
 const Round_location = styled.div`
     position: relative;
-    top:350px;
+    top:300px;
     left:350px;
 `
 export default () => {

@@ -73,7 +73,6 @@ export default () => {
                 console.log(newNumber);
                 console.log(number);
                 count += 1;
-                return <div>{console.log('------------')}</div>
             })
             setNumber(newNumber)
             setMembers(result.data.data)
@@ -96,18 +95,18 @@ export default () => {
         </Top_location>
         <Row_location>
         <SmallTable_leftlocation>
-            <SmallTable className="4">이원준</SmallTable>
-            <SmallTable className="3">최수원</SmallTable>
-            <SmallTable className="2">성의근</SmallTable>
-            <SmallTable className="1">한준범</SmallTable>
-            <SmallTable className="0">이재명</SmallTable>
+            { number[4] ===0 ? <SmallTable className="4" style={{backgroundColor:'#66AA65'}}>이원준</SmallTable>:<SmallTable className="4">이원준</SmallTable>}
+            { number[3] ===0 ? <SmallTable className="3" style={{backgroundColor:'#66AA65'}}>최수원</SmallTable>:<SmallTable className="3">최수원</SmallTable>}
+            { number[2] ===0 ? <SmallTable className="2" style={{backgroundColor:'#66AA65'}}>성의근</SmallTable>:<SmallTable className="2">성의근</SmallTable>}
+            { number[1] ===0 ? <SmallTable className="1" style={{backgroundColor:'#66AA65'}}>한준범</SmallTable>:<SmallTable className="1">한준범</SmallTable>}
+            { number[1] ===0 ? <SmallTable className="0" style={{backgroundColor:'#66AA65'}}>이재명</SmallTable>:<SmallTable className="1">이재명</SmallTable>}
         </SmallTable_leftlocation>
         <SmallTable_rightlocation>
-            <SmallTable className="9">조가연</SmallTable>
-            <SmallTable className="10">김언수</SmallTable>
-            <SmallTable className="11">김성주</SmallTable>
-            <SmallTable className="12">박상현</SmallTable>
-            <SmallTable className="13">유지민</SmallTable>
+            { number[9] ===0 ? <SmallTable className="9" style={{backgroundColor:'#66AA65'}}>조가연</SmallTable>:<SmallTable className="4">이원준</SmallTable>}
+            { number[10] ===0 ? <SmallTable className="10" style={{backgroundColor:'#66AA65'}}>김언수</SmallTable>:<SmallTable className="3">최수원</SmallTable>}
+            { number[11] ===0 ? <SmallTable className="11" style={{backgroundColor:'#66AA65'}}>김성주</SmallTable>:<SmallTable className="2">성의근</SmallTable>}
+            { number[12] ===0 ? <SmallTable className="12" style={{backgroundColor:'#66AA65'}}>박상현</SmallTable>:<SmallTable className="1">한준범</SmallTable>}
+            { number[13] ===0 ? <SmallTable className="13" style={{backgroundColor:'#66AA65'}}>유지민</SmallTable>:<SmallTable className="1">이재명</SmallTable>}
         </SmallTable_rightlocation>
         </Row_location>
         </font>
