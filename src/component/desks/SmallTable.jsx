@@ -1,4 +1,13 @@
 import styled from "styled-components"
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+
+
+const Font = styled.div`
+    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
+    font-family:Pretendard;
+    font-size:18px;
+`
 const SmallTable = styled.div`
     width: 56px;
     height: 103px;
@@ -6,6 +15,9 @@ const SmallTable = styled.div`
     background-color: #dadada;
     box-shadow: 1px 3px 1px 1px #00000056;
     margin:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 const SmallTable_row = styled.div`
     width: 103px;
@@ -14,6 +26,9 @@ const SmallTable_row = styled.div`
     background-color: #dadada;
     box-shadow: 1px 3px 1px 1px #00000056;
     margin:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 const SmallTable_leftlocation = styled.div`
     display: flex;
@@ -42,31 +57,59 @@ const Top_location= styled.div`
     top:-390px;
     left:500px;
 `
+
 export default () => {
+    const [getMembers, setMembers] = useState([])
+    let count = 0;
+    const [number,setNumber]=useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
+    useEffect(() => {
+        axios.get("/attend/list")
+        .then(result => {
+            console.log(result.data.data[0].id)
+            const newNumber = [...number];
+            result.data.data.map((element, idx)=>{
+                console.log(idx);
+                newNumber[count] = element.isAttend;
+                console.log(newNumber);
+                console.log(number);
+                count += 1;
+            })
+            setNumber(newNumber)
+            setMembers(result.data.data)
+            console.log(getMembers)
+        })
+        .catch(console.log)
+    }, [])
     return (
         <>
+        <font>
+            <div>
+                {
+                    console.log(number[14])
+                }
+            </div>
         <Top_location>
-            <SmallTable_row></SmallTable_row>
-            <SmallTable_row></SmallTable_row>
-            <SmallTable style={{marginLeft:30}}></SmallTable>
+            { number[18] ===0 ? <SmallTable_row className="18" style={{backgroundColor:'#66AA65'}}>김예림</SmallTable_row>:<SmallTable_row className="18">김예림</SmallTable_row>}
+            { number[19] ===0 ? <SmallTable_row className="19" style={{backgroundColor:'#66AA65'}}>김수인</SmallTable_row>:<SmallTable_row className="19">김수인</SmallTable_row>}
+            { number[20] ===0 ? <SmallTable className="20" style={{backgroundColor:'#66AA65'}}>김건호</SmallTable>:<SmallTable className="20">김건호</SmallTable>}
         </Top_location>
         <Row_location>
         <SmallTable_leftlocation>
-            <SmallTable></SmallTable>
-            <SmallTable></SmallTable>
-            <SmallTable></SmallTable>
-            <SmallTable></SmallTable>
-            <SmallTable></SmallTable>
+            { number[4] ===0 ? <SmallTable className="4" style={{backgroundColor:'#66AA65'}}>이원준</SmallTable>:<SmallTable className="4">이원준</SmallTable>}
+            { number[3] ===0 ? <SmallTable className="3" style={{backgroundColor:'#66AA65'}}>최수원</SmallTable>:<SmallTable className="3">최수원</SmallTable>}
+            { number[2] ===0 ? <SmallTable className="2" style={{backgroundColor:'#66AA65'}}>성의근</SmallTable>:<SmallTable className="2">성의근</SmallTable>}
+            { number[1] ===0 ? <SmallTable className="1" style={{backgroundColor:'#66AA65'}}>한준범</SmallTable>:<SmallTable className="1">한준범</SmallTable>}
+            { number[1] ===0 ? <SmallTable className="0" style={{backgroundColor:'#66AA65'}}>이재명</SmallTable>:<SmallTable className="1">이재명</SmallTable>}
         </SmallTable_leftlocation>
         <SmallTable_rightlocation>
-            <SmallTable></SmallTable>
-            <SmallTable></SmallTable>
-            <SmallTable></SmallTable>
-            <SmallTable></SmallTable>
-            <SmallTable></SmallTable>
+            { number[9] ===0 ? <SmallTable className="9" style={{backgroundColor:'#66AA65'}}>조가연</SmallTable>:<SmallTable className="4">이원준</SmallTable>}
+            { number[10] ===0 ? <SmallTable className="10" style={{backgroundColor:'#66AA65'}}>김언수</SmallTable>:<SmallTable className="3">최수원</SmallTable>}
+            { number[11] ===0 ? <SmallTable className="11" style={{backgroundColor:'#66AA65'}}>김성주</SmallTable>:<SmallTable className="2">성의근</SmallTable>}
+            { number[12] ===0 ? <SmallTable className="12" style={{backgroundColor:'#66AA65'}}>박상현</SmallTable>:<SmallTable className="1">한준범</SmallTable>}
+            { number[13] ===0 ? <SmallTable className="13" style={{backgroundColor:'#66AA65'}}>유지민</SmallTable>:<SmallTable className="1">이재명</SmallTable>}
         </SmallTable_rightlocation>
         </Row_location>
-    
+        </font>
         </>
     )
 }

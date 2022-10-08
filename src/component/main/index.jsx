@@ -1,15 +1,8 @@
 import * as S from './index.style'
 import axios from 'axios'
-import { useEffect } from 'react'
+import { useEffect,useState} from 'react'
 import { Roundtable, Pillar, LargeTable, SmallTable, StudentCard } from '../desks'
 const Render = () => {
-    useEffect(() => {
-        axios.get("/member/list")
-        .then(result => {
-            console.log(result)
-        })
-        .catch(console.log)
-    }, [])
     return (
         <S.Main>
             <S.Check_Mi_Seat> {/*회색 사각형 틀 */}

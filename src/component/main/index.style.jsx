@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const Main = styled.div`
     width: 100vw;
-    height: 980px;
+    height: 800px;
     background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
@@ -60,6 +60,6 @@ export const TestBox = styled.div`
 export const Check_Mi_Seat=styled.div`
     margin:70px auto;
     width:900px;
-    height:104vh;
-    background-color: #5d5a5a;
+    height:70vh;
+    background-color: #ffffff;
 `
