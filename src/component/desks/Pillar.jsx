@@ -67,7 +67,7 @@ const Largelcabinet = styled.div` //큰 캐비넷 위치,디자인,설정
     background-color: #DADADA;
     box-shadow: 1px 3px 1px 1px #00000056;
     margin:85px 0 0 15px;
-        position: relative;
+    position: relative;
     top:100px;
     `
 
